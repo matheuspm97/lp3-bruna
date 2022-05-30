@@ -1,0 +1,233 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+<title>Predict Churn</title>
+</head>
+<body>
+
+
+<form action="Predicao" method="POST" >
+
+    <div class="alert">
+        <h2>Predict Churn</h2>
+        
+    </div>
+    
+    <div class="container">
+        
+        <h2>Por favor escolha seu genero:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="f-option" name="genero" value=0>
+        <label for="f-option">Masculino</label>
+        
+        <div class="check"></div>
+      </li>
+      
+          
+      <li>
+        <input type="radio" id="t-option" name="genero" value="1">
+        <label for="t-option">Feminino</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+
+    <div class="container">
+        
+        <h2>Idade Superior a 35 anos:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="m-option" name="idade1" value=1>
+        <label for="m-option">Sim</label>
+        
+        <div class="check"></div>
+      </li>
+      
+          
+      <li>
+        <input type="radio" id="n-option" name="ideda2" value=0>
+        <label for="n-option">Não</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+    <div class="container">
+        
+        <h2>Informe os serviços:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="o-option" name="telefone" value=1>
+        <label for="o-option">Telefone</label>
+        
+        <div class="check"></div>
+      </li>
+      
+      <li>
+        <input type="radio" id="p-option" name="suporte" value=1>
+        <label for="p-option">Suporte</label>
+        
+        <div class="check"></div>
+      </li>
+          
+      <li>
+        <input type="radio" id="q-option" name="streaming" value=0>
+        <label for="q-option">Stream de Filmes</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+    <div class="container">
+        
+        <h2>Forma de pagamento:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="r-option" name="chequee" value=1>
+        <label for="r-option">Cheque eletrônico</label>
+        
+        <div class="check"></div>
+      </li>
+
+      <li>
+        <input type="radio" id="s-option" name="chequef" value=1>
+        <label for="s-option">Cheque Físico</label>
+        
+        <div class="check"></div>
+      </li>     
+
+      <li>
+        <input type="radio" id="u-option" name="transferência" value=1>
+        <label for="u-option">Transferência Bancária</label>
+        
+        <div class="check"></div>
+      </li>  
+          
+      <li>
+        <input type="radio" id="v-option" name="cartaoc" value=1>
+        <label for="v-option">Cartão de Crédito</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+
+    <div class="container">
+        
+        <h2>Contrato:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="b-option" name="mensal" value=1>
+        <label for="b-option">Mês a mês</label>
+        
+        <div class="check"></div>
+      </li>
+
+      <li>
+        <input type="radio" id="b-option" name="anual" value=1>
+        <label for="b-option">Um ano</label>
+        
+        <div class="check"></div>
+      </li>
+      
+          
+      <li>
+        <input type="radio" id="c-option" name="bianual" value=0>
+        <label for="c-option">Dois ano</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+
+    
+                      
+              <!--<p>Por favor escolha seu gender:</p>
+                <input type="radio" name="gender" value=0>
+                <label for="Masculino">Masculino</label><br>
+                <input type="radio"  name="gender1" value=1>
+                <label for="Feminino">Feminino</label><br>
+
+              <br>
+     
+
+        <p>Idade Superior a 35 anos:</p>
+       <input type="radio" name="Senior_Citizen1" value=1>
+          <label for="idade">Sim</label><br>
+        <input type="radio" name="Senior_Citizen" value=0>
+          <label for="idade">Não</label><br>
+
+
+        <br>
+        
+        <p>Informe os serviços:</p>
+        <input type="checkbox"  name="telefone" value="1">
+        <label for="telefone">Telefone</label>
+
+        <input type="checkbox" name="suporte" value="1">
+        <label for="suporte">Suporte</label>
+
+        <input type="checkbox"  name="streaming" value="1">
+        <label for="streaming">Streaming de Filmes</label>
+
+
+        <p>Forma de pagamento</p>
+        <input type="radio"  name="chequee" value="1">
+        <label for="chequee">Cheque eletrônico</label>
+        <input type="radio"  name="chequef" value="1">
+        <label for="chequef">Cheque Físico</label>
+        <input type="radio"  name="transferecia" value="1">
+        <label for="transferecia">Transferência Bancária</label>
+        <input type="radio"  name="cartaoc" value="1">
+        <label for="cartaoc">Cartão de Crédito</label>
+
+
+        <p>Contrato</p>
+        <input type="radio"  name="mensal" value="1">
+        <label for="mensal">Mês a mês</label>
+        <input type="radio"  name="anual" value="1">
+        <label for="anual">Um ano</label>
+        <input type="radio"  name="bianual" value="1">
+        <label for="bianual">Dois anos</label>
+
+<p>-->
+
+    <div class="container">
+        <div class="text-box">
+            <a href="predicao.html" class="btn btn-white btn-animate">Prediction CHurn</a>
+        </div>
+      
+    
+
+    </body>
+    
+      
+    
+</html>
