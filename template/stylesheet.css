@@ -32,16 +32,15 @@ ul li{
 ul li input[type=radio]{
   position: flex;
   visibility: hidden;
+  
+
 }
 
 ul li label{
   display: flex;
-  position: relative;
   font-weight: 300;
   font-size: 1.35em;
-  padding: 25px 25px 25px 80px;
-  margin: 10px auto;
-  height: 30px;
+  padding: 20px 0 0 80px;
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
@@ -178,20 +177,16 @@ by the way it is so weird when you look at your code a couple of years after you
 	font-weight: bold;
 }
 
-.form-subimit-button {
-
-}
-
 .text-box {
-  margin-left: 44vw;
- margin-top: 42vh;
+  margin-left: 34vw;
+ margin-top: 48vh;
 }
 
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 30px 80px;
   display: inline-block;
   border-radius: 100px;
   transition: all .2s;
