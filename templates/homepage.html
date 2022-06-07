@@ -1,0 +1,283 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+<title>Predict Churn</title>
+</head>
+<body>
+
+  <div class="box">
+
+  <form action="predicao" method="POST">
+
+  <fieldset>
+    <div class="alert">
+        <h2>Predict Churn</h2>
+        
+    </div>
+    
+    <div class="container">
+        
+        <h2>Por favor escolha seu genero:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="gender" name="Gender" value="0" required>
+        <label for="gender">Masculino</label>
+        
+        <div class="check"></div>
+      </li>
+      
+          
+      <li>
+        <input type="radio" id="f-option" name="Gender" value="1" required>
+        <label for="f-option">Feminino</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+
+    <div class="container">
+        
+        <h2>Idade Superior a 35 anos:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="i-option" name="Senior_Citizen" value="1" required>
+        <label for="i-option">Sim</label>
+        
+        <div class="check"></div>
+      </li>
+      
+          
+      <li>
+        <input type="radio" id="t-option" name="Senior_Citizen" value="0" required>
+        <label for="t-option">Não</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+    <h2>Serviço de Telefone:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="p-option" name="Phone_Service" value="1" required>
+        <label for="p-option">Sim</label>
+        
+        <div class="check"></div>
+      </li>
+      
+          
+      <li>
+        <input type="radio" id="q-option" name="Phone_Service" value="2" required>
+        <label for="q-option">Não</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+        
+    <h2>Suporte Técnico:</h2>
+        
+    <ul>
+    <li>
+      <input type="radio" id="s-option" name="Tech_Support" value="0" required>
+      <label for="s-option">Sim</label>
+      
+      <div class="check"></div>
+    </li>
+    
+        
+    <li>
+      <input type="radio" id="h-option" name="Tech_Support" value="1" required>
+      <label for="h-option">Não</label>
+      
+      <div class="check"><div class="inside"></div></div>
+    </li>
+  </ul>
+  </div>
+  
+  <div class="signature">
+      
+  </div>
+
+  <h2>Streaming Movies:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="i-option" name="Streaming_Movies" value="0" required>
+        <label for="i-option">Sim</label>
+        
+        <div class="check"></div>
+      </li>
+      
+          
+      <li>
+        <input type="radio" id="j-option" name="Streaming_Movies" value="1" required>
+        <label for="j-option">Não</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+        
+    </div>
+    <div class="container">
+        
+        <h2>Formas de pagamento:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="k-option" name="Payment_Method" value="0" required>
+        <label for="k-option">Cheque eletrônico</label>
+        
+        <div class="check"></div>
+      </li>
+
+      <li>
+        <input type="radio" id="c-option" name="Payment_Method" value="1" required>
+        <label for="c-option">Cheque Físico</label>
+        
+        <div class="check"></div>
+      </li>     
+
+      <li>
+        <input type="radio" id="n-option" name="Payment_Method" value="2" required>
+        <label for="n-option">Transferência Bancária</label>
+        
+        <div class="check"></div>
+      </li>  
+          
+      <li>
+        <input type="radio" id="b-option" name="Payment_Method" value="3" required>
+        <label for="b-option">Cartão de Crédito</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+
+    <div class="container">
+        
+        <h2>Contrato:</h2>
+        
+      <ul>
+      <li>
+        <input type="radio" id="k-option" name="Contract" value="2">
+        <label for="k-option">Mês a mês</label>
+        
+        <div class="check"></div>
+      </li>
+
+      <li>
+        <input type="radio" id="r-option" name="Contract" value="1">
+        <label for="r-option">Um ano</label>
+        
+        <div class="check"></div>
+      </li>
+      
+          
+      <li>
+        <input type="radio" id="v-option" name="Contract" value="0">
+        <label for="v-option">Dois ano</label>
+        
+        <div class="check"><div class="inside"></div></div>
+      </li>
+    </ul>
+    </div>
+    
+    <div class="signature">
+        
+    </div>
+
+    <div class="container">
+      <div class="text-box">
+          <button class="btn btn-white btn-animate">Prediction Churn</button>
+      </div>
+
+    <script>
+            
+                  
+          const btn = document.querySelector('#btn');
+          btn.addEventListener('click', (event) => {
+            let checkboxesGender = document.querySelectorAll('input[name="Gender"]:checked');
+            let checkboxesSeniorCitizen = document.querySelectorAll('input[name="Senior_Citizen"]:checked');
+            let checkboxesTechSupport = document.querySelectorAll('input[name="Tech_Support"]:checked');
+            let checkboxesStreamingMovies = document.querySelectorAll('input[name="Streaming_Movies"]:checked');
+            let checkboxesContract = document.querySelectorAll('input[name="Contract"]:checked');
+            let checkboxesPaymentMethod = document.querySelectorAll('input[name="Payment_Method"]:checked');
+
+            let valuesGender = [];
+            let valuesSeniorCitizen = [];
+            let valuesTechSupport = [];
+            let valuesStreamingMovies = [];
+            let valuesContract = [];
+            let valuesPaymentMethod = [];
+            
+            checkboxesGender.forEach((checkbox) => {
+              valuesGender.push(checkbox.value);
+            });
+            checkboxesSeniorCitizen.forEach((checkbox) => {
+              valuesSeniorCitizen.push(checkbox.value);
+            });
+            checkboxesTechSupport.forEach((checkbox) => {
+              valuesTechSupport.push(checkbox.value);
+            });
+            checkboxesStreamingMovies.forEach((checkbox) => {
+              valuesStreamingMovies.push(checkbox.value);
+            });
+            checkboxesContract.forEach((checkbox) => {
+              valuesContract.push(checkbox.value);
+            });
+            checkboxesPaymentMethod.forEach((checkbox) => {
+              valuesPaymentMethod.push(checkbox.value);
+            });
+
+            console.log("---------valuesGender----------")
+            console.log(valuesGender)
+            console.log("---------valuesGender--------")
+            console.log("------valuesSeniorCitizen---------")
+            console.log(valuesSeniorCitizen)
+            console.log("------valuesSeniorCitizen--------")
+            console.log("-----valuesTechSupport------")
+            console.log(valuesTechSupport)
+            console.log("------valuesTechSupport---------")
+            console.log("------valuesStreamingMovies--------")
+            console.log(valuesStreamingMovies)
+            console.log("------valuesStreamingMovies---------")
+            console.log("------valuesContract-------")
+            console.log(valuesContract)
+            console.log("-------valuesContract----------")
+            console.log("------valuesPaymentMethod----------")
+            console.log(valuesPaymentMethod)
+            console.log("-------valuesPaymentMethod---------")
+        });    
+    </script>
+      
+    </body>
+    
+     
+    </html>

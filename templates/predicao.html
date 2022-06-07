@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+    <style>
+
+
+body {
+        
+}
+
+.div.container4 {
+    height: 10em;
+    position: relative }
+div.container4 {
+    margin: 0;
+    background: #222222;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+</style>
+
+    <title>predicao</title>
+
+</head>
+<body>
+        
+    {% if predicao == 1 %}
+
+    <div class=churn>
+        <marquee width="700" scrollamount="100" scrolldelay="900" loop="7">CHURN!</marquee>
+    </div>
+
+    {% else %}
+
+    <div class=nao_churn>
+        <marquee width="700"  scrollamount="100" scrolldelay="900" loop="7">NÃO CHURN!</marquee>
+    </div>
+     
+    {% endif %}
+        
+   
+</body>
+
+</html>     

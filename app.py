@@ -10,8 +10,8 @@ app = Flask(__name__)
 def index():
   return render_template('homepage.html', nome='Fulano')
 
-@app.route('/homepage', methods=['POST'])
-def homepage():
+@app.route('/predicao', methods=['POST'])
+def predicao():
   Gender = int(request.form['Gender'])
   Senior_Citizen = int(request.form['Senior_Citizen'])
   Phone_Service = int(request.form['Phone_Service'])
@@ -19,7 +19,7 @@ def homepage():
   Streaming_Movies = int(request.form['Streaming_Movies'])
   Contract = int(request.form['Contract'])
   Payment_Method = int(request.form['Payment_Method'])
-  predicao = model.predict([[Gender, Senior_Citizen, Phone_Service, Tech_Support, Streaming_Movies, Contract, Payment_Method]])
+  predicao = model.predict([[Gender, Senior_Citizen, Phone_Service, Tech_Support, Streaming_Movies, Contract,Payment_Method]])
   return render_template('predicao.html', predicao=predicao[0])
   
   
@@ -29,6 +29,7 @@ app.run(debug=True)
 # python app.py (para executar)
 
 # git add .
+
 # git commit -m "nomenovo"
 # git push
 
