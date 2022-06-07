@@ -7,7 +7,7 @@ with open('model.pkl', 'rb') as file_in:
 app = Flask(__name__)
 
 @app.route('/')
-def index():
+def homepage():
   return render_template('homepage.html', nome='Fulano')
 
 @app.route('/predicao', methods=['POST'])
@@ -19,7 +19,13 @@ def predicao():
   Streaming_Movies = int(request.form['Streaming_Movies'])
   Contract = int(request.form['Contract'])
   Payment_Method = int(request.form['Payment_Method'])
-  predicao = model.predict([[Gender, Senior_Citizen, Phone_Service, Tech_Support, Streaming_Movies, Contract,Payment_Method]])
+  predicao = model.predict(['Gender'])
+  predicao = model.predict(['Senior_Citizen'])
+  predicao = model.predict(['Phone_Service'])
+  predicao = model.predict(['Tech_Support'])
+  predicao = model.predict(['Streaming_Movies'])
+  predicao = model.predict(['Contract'])
+  predicao = model.predict(['Payment_Method'])
   return render_template('predicao.html', predicao=predicao[0])
   
   
